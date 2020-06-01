@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<object name="portal_controlpanel"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="eea.rabbitmq.plone"
+    purge="False">
+
+    <configlet title="Privacy Screen Settings"
+        action_id="privacy_screen_settings"
+        appId="eea.privacyscreen"
+        category="Products"
+        condition_expr=""
+        url_expr="string:${portal_url}/@@privacy_screen_settings"
+        visible="True"
+        i18n:attributes="title">
+      <permission>Manage portal</permission>
+    </configlet>
+
+  </object>

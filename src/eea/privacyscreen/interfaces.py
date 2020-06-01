@@ -1,16 +1,15 @@
 # -*- coding: utf-8 -*-
 """Module where all interfaces, events and exceptions live."""
 
-from collective.z3cform.datagridfield import DictRow
-from plone.app.registry.browser.controlpanel import ControlPanelFormWrapper
-from plone.app.registry.browser.controlpanel import RegistryEditForm
-from plone.app.textfield import RichText
-from plone.z3cform import layout
-from z3c.form import form
+from collective.z3cform.datagridfield.registry import DictRow
+# from plone.app.textfield import RichText
+# from plone.app.z3cform.wysiwyg.widget import WysiwygFieldWidget
+# from plone.autoform import directives
 from zope.interface import Interface
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
-from zope.schema import List
+from zope.schema import Text
 from zope.schema import TextLine
+from zope.schema import Tuple
 
 
 class IEeaPrivacyscreenLayer(IDefaultBrowserLayer):
@@ -22,27 +21,17 @@ class IProtectedDestination(Interface):
     """
 
     detect = TextLine(title=u"Regexp to detect this destination website",
-                      required=True)
-    statement = RichText(title=u"Privacy Statement", required=True)
+                      required=False)
+    # directives.widget('statement', WysiwygFieldWidget)
+    # statement = RichText(title=u"Privacy Statement", required=True)
+    privacy_statement = Text(title=u"Privacy statement", required=False)
 
 
-class IProtectedDestinations(Interface):
+class IPrivacyScreenSettings(Interface):
     """ Client settings for ArcGIS
     """
 
-    settings = List(title=u"Settings",
-                    value_type=DictRow(title=u"Website Settings",
-                                       schema=IProtectedDestination))
-
-
-class ProtectedDestinationsControlPanelForm(RegistryEditForm):
-    form.extends(RegistryEditForm)
-    schema = IProtectedDestinations
-
-
-ProtectedDestinationsControlPanelView = layout.wrap_form(
-    ProtectedDestinationsControlPanelForm,
-    ControlPanelFormWrapper
-)
-ProtectedDestinationsControlPanelView.label = \
-    u"Privacy Screens for embedded content"
+    settings = Tuple(title=u"Settings",
+                     required=False,
+                     value_type=DictRow(title=u"Website Settings",
+                                        schema=IProtectedDestination))

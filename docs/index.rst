@@ -1,0 +1,5 @@
+=================
+eea.privacyscreen
+=================
+
+User documentation

@@ -1,0 +1,72 @@
+<html>
+<head>
+  <style>
+    body {
+      border: 1px solid #CCC;
+      height: 100%;
+      text-align: center;
+      background-size: cover;
+    }
+
+    #overlay {
+      background-color: #CCCC;
+      margin: 0.3em;
+    }
+
+    #choice_info {
+      background-color: #CCC;
+      padding: 1em;
+    }
+
+    #privacy_notification {
+      margin-bottom: 2em;
+    }
+
+    form {
+      width: 50%;
+      margin: 0px auto;
+    }
+  </style>
+</head>
+<script tal:content="string: var iframe_url = '${view/iframe_url}';" ></script>
+<script src="/++plone++privacyscreen/embed.js" ></script>
+<body tal:attributes="style string:background-image:url(${view/embed_background})">
+  <div id="overlay">
+
+  <h2 tal:content="view/title">Some map</h2>
+
+  <form>
+    <button>Show external content</button>
+    <div style="text-align: left">
+      <div>
+        <input
+          name="remember"
+          type="radio"
+          />
+        <label for="remember">Remember my choice</label>
+      </div>
+      <div>
+        <input
+          name="apply_to_all"
+          type="radio"
+          /><label>Apply to all other content like this</label>
+      </div>
+    </div>
+  </form>
+
+  <div tal:define="settings view/settings">
+    <h3>Privacy notification</h3>
+    <div id="privacy_notification" tal:content="structure view/privacy_notification">Lorem ipsum</div>
+
+    <div id="choice_info">
+      Your choice will be saved in a cookie for
+      <span tal:replace="settings/cookie_domain" >Domain</span>, managed by
+      <span tal:replace="view/portal_url" >URL</span> that will expire in
+      <span tal:replace="settings/lifetime_days" >0</span> days
+    </div>
+
+  </div>
+  </div>
+
+</body>
+</html>

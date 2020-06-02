@@ -43,7 +43,7 @@
 
   <!-- -*- extra stuff goes here -*- -->
 
-  <browser:page class=".controlpanel.PrivacyScreenControlPanelView"
+  <browser:page class=".controlpanel.EmbedScreenControlPanelView"
                 for="Products.CMFPlone.interfaces.IPloneSiteRoot"
                 name="privacy_screen_settings"
                 permission="cmf.ManagePortal"

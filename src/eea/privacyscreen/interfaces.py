@@ -7,6 +7,7 @@ from collective.z3cform.datagridfield.registry import DictRow
 # from plone.autoform import directives
 from zope.interface import Interface
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
+from zope.schema import Int
 from zope.schema import Text
 from zope.schema import TextLine
 from zope.schema import Tuple
@@ -17,7 +18,7 @@ class IEeaPrivacyscreenLayer(IDefaultBrowserLayer):
 
 
 class IProtectedDestination(Interface):
-    """
+    """ NOTE: Not used at the moment
     """
 
     detect = TextLine(title=u"Regexp to detect this destination website",
@@ -28,10 +29,27 @@ class IProtectedDestination(Interface):
 
 
 class IPrivacyScreenSettings(Interface):
-    """ Client settings for ArcGIS
+    """ NOTE: Not used at the moment
     """
 
     settings = Tuple(title=u"Settings",
                      required=False,
                      value_type=DictRow(title=u"Website Settings",
                                         schema=IProtectedDestination))
+
+
+class IEmbedScreenSettings(Interface):
+    """ Generic settings for the embed screen
+
+    Used for configuration form in control panel
+    """
+
+    lifetime_days = Int(title=u"Cookie lifetime, in days",
+                        required=True,
+                        default=10)
+    cookie_domain = TextLine(
+        title=u"Cookie domain",
+        description=u"User preferences will be saved in a cookie for this "
+        u"domain",
+        default=u".eea.europa.eu"
+    )

@@ -1,18 +1,21 @@
-from collective.z3cform.datagridfield import BlockDataGridFieldFactory
-from eea.privacyscreen.interfaces import IPrivacyScreenSettings
+from eea.privacyscreen.interfaces import IEmbedScreenSettings
 from plone.app.registry.browser.controlpanel import ControlPanelFormWrapper
 from plone.app.registry.browser.controlpanel import RegistryEditForm
 from plone.z3cform import layout
 from z3c.form import form
 
 
-class PrivacyScreenControlPanelForm(RegistryEditForm):
-    form.extends(RegistryEditForm)
-    schema = IPrivacyScreenSettings
+# from collective.z3cform.datagridfield import BlockDataGridFieldFactory
+# from eea.privacyscreen.interfaces import IPrivacyScreenSettings
 
-    def updateFields(self):
-        super(PrivacyScreenControlPanelForm, self).updateFields()
-        self.fields['settings'].widgetFactory = BlockDataGridFieldFactory
+
+class EmbedScreenControlPanelForm(RegistryEditForm):
+    form.extends(RegistryEditForm)
+    schema = IEmbedScreenSettings
+
+    # def updateFields(self):
+    #     super(EmbedScreenControlPanelForm, self).updateFields()
+    # self.fields['settings'].widgetFactory = BlockDataGridFieldFactory
 
     # def updateWidgets(self):
     #     super(PrivacyScreenControlPanelForm, self).updateWidgets()
@@ -22,9 +25,9 @@ class PrivacyScreenControlPanelForm(RegistryEditForm):
     # self.widgets['settings'].allow_reorder = False
 
 
-PrivacyScreenControlPanelView = layout.wrap_form(
-    PrivacyScreenControlPanelForm,
+EmbedScreenControlPanelView = layout.wrap_form(
+    EmbedScreenControlPanelForm,
     ControlPanelFormWrapper
 )
-PrivacyScreenControlPanelView.label = \
+EmbedScreenControlPanelView.label = \
     u"Privacy Screens for embedded content"

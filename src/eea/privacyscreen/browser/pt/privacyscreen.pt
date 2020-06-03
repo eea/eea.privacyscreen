@@ -46,21 +46,19 @@
       <input type="hidden" name="cookie_domain" tal:attributes="value settings/cookie_domain" />
       <input type="hidden" name="lifetime_days" tal:attributes="value settings/lifetime_days" />
       <button>Show external content</button>
-      <div style="text-align: left">
-        <div>
-          <input
-            name="remember"
-            type="radio"
-            />
-          <label for="remember">Remember my choice</label>
-        </div>
-        <div>
-          <input
-            name="apply_to_all"
-            type="radio"
-            /><label>Apply to all other content like this</label>
-        </div>
+      <div>
+        <input
+          name="remember"
+          type="radio"
+          />
+        <label for="remember">Remember my choice</label>
       </div>
+        <!-- <div> -->
+        <!--   <input -->
+        <!--     name="apply_to_all" -->
+        <!--     type="radio" -->
+        <!--     /><label>Apply to all other content like this</label> -->
+        <!-- </div> -->
     </form>
 
     <div >

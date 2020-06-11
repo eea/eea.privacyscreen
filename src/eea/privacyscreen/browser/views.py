@@ -57,7 +57,7 @@ class PrivacyScreenPortal(BrowserView):
 
         # TODO: use embed_type to get fallback background
         self.embed_background = form.get(
-            'embed_background', EMBED_BACKGROUNDS.get(self.embed_type))
+            'screenshot', EMBED_BACKGROUNDS.get(self.embed_type))
         self.settings = settings
         self.privacy_notification = PRIVACY_STATEMENTS.get(domain)['text']
         return self.index()

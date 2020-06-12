@@ -13,8 +13,12 @@ DEFAULT_PRIVACY_STATEMENT = "Generic default privacy statement"
 PRIVACY_STATEMENTS = {
     "esri": {
         "detect": detect_esri,
-        "text": """ Privacy statement for ESRI here;
-        <strong>html</strong> markup allowed """
+        "text": """ This content is hosted by a third party (<a
+        href="https://www.esri.com">www.esri.com</a>); by showing the
+        external content you accept the terms and conditions of:
+        <a
+        href="https://www.esri.com/en-us/privacy/overview">www.esri.com/en-us/privacy/overview</a>
+        """
     },
     "default": {
         "detect": lambda req: False,

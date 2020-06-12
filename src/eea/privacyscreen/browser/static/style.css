@@ -13,8 +13,10 @@ body {
   background-color: #fff;
   margin: 0.3em;
   font-family: sans-serif;
-  margin: 0 auto;
+  margin: 1em auto;
   color: #222;
+  width: 60%;
+  padding: 0.6em;
 }
 
 #choice_info {
@@ -39,8 +41,8 @@ button {
   line-height: 1.5;
   border-radius: .25rem;
   color: #fff;
-  background-color: #285a17;
-  border-color: #1e4810;
+  background-color: #002d54;
+  border-color: #002d54;
   margin-bottom: 1em;
 }
 button:hover {
@@ -89,4 +91,7 @@ button:focus {
   position: relative;
   top: -4px;
   left: 8px;
+}
+#privacy_notification {
+  margin: 1em 0em;
 }

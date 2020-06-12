@@ -1,36 +1,6 @@
 <html>
 <head>
-  <style>
-    body {
-      border: 1px solid #CCC;
-      height: 100%;
-      text-align: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      margin: 0px;
-      padding: 0px;
-      display: flex;
-    }
-
-    #overlay {
-      background-color: #cccccc78;
-      margin: 0.3em;
-    }
-
-    #choice_info {
-      background-color: #CCC;
-      padding: 1em;
-    }
-
-    #privacy_notification {
-      margin-bottom: 2em;
-    }
-
-    form {
-      width: 80%;
-      margin: 0px auto;
-    }
-  </style>
+    <link rel="stylesheet" href="/++plone++privacyscreen/style.css">
 </head>
 <script tal:content="string: var iframe_url = '${view/iframe_url}';" ></script>
 <script src="/++plone++privacyscreen/embed.js" ></script>

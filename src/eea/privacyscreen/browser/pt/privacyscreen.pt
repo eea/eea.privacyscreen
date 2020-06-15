@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="/++plone++privacyscreen/style.css">
     </head>
     <script tal:content="string: var iframe_url = '${view/iframe_url}';" ></script>
-    <script src="/++plone++privacyscreen/embed.js" ></script>
+    <script tal:attributes="src string:${context/portal_url}/++plone++privacyscreen/embed.js" src="/++plone++privacyscreen/embed.js" ></script>
     <body tal:define="settings view/settings"
       tal:attributes="style string:background-image:url(${view/embed_background})">
 

@@ -1,5 +1,4 @@
 body {
-  border: 1px solid #CCC;
   height: 100%;
   text-align: center;
   background-size: cover;
@@ -10,7 +9,7 @@ body {
 }
 
 #overlay {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.85);
   margin: 0.3em;
   font-family: sans-serif;
   margin: 1em auto;
@@ -20,7 +19,6 @@ body {
 }
 
 #choice_info {
-  background-color: #fff;
   padding: 1.3em;
   font-size: 13px;
 }
@@ -33,7 +31,6 @@ form {
 button {
   cursor: pointer;
   display: inline-block;
-  font-weight: bbold;
   text-align: center;
   border: 1px solid transparent;
   padding: .375rem .75rem;
@@ -46,7 +43,7 @@ button {
   margin-bottom: 1em;
 }
 button:hover {
-  background-color: #34711f;
+  background-color: #005588;
 }
 button:focus {
   outline: none;

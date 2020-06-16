@@ -2,7 +2,7 @@
   <head>
     <link rel="stylesheet"
       href="/++plone++privacyscreen/style.css"
-      tal:attributes="href string:string:${context/portal_url}/++plone++privacyscreen/style.css">
+      tal:attributes="href string:${context/portal_url}/++plone++privacyscreen/style.css">
     </head>
     <script tal:content="string: var iframe_url = '${view/iframe_url}';" ></script>
     <script tal:attributes="src string:${context/portal_url}/++plone++privacyscreen/embed.js" src="/++plone++privacyscreen/embed.js" ></script>

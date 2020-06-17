@@ -25,14 +25,17 @@ function setupPrivacyScreen() {
     var node = iframes[i];
     var group = node.getAttribute('data-embed-group');
     var screenshot = node.getAttribute('data-embed-screenshot');
+    var title = node.getAttribute('data-embed-title');
     screenshot = screenshot ? '&screenshot=' + encodeURI(screenshot) : '';
+    title = title ? '&embed_title=' + encodeURI(title) : '';
     var src = node.getAttribute('src');
     // TODO: use a definitive URL for @@embed
     // TODO: test for accepted cookie, use a setTimeout to check for it
 
-    var url = './@@embed?group=' + group + screenshot +
+    var url = './@@embed?group=' + group + screenshot + title +
       '&src=' + encodeURI(src);
 
+    console.log('group', group);
     if (group) {
       if (!CookiesHelper.readCookie('embed_' + group)) {
         node.setAttribute('src', url);

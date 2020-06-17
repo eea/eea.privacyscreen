@@ -15,7 +15,7 @@ class PrivacyScreenPortal(BrowserView):
         registry = getUtility(IRegistry, context=self.context)
         settings = registry.forInterface(IEmbedScreenSettings)
 
-        domain = get_domain(self.request) or 'default'
+        domain = get_domain(self.request.form.get('src', '')) or 'default'
 
         form = self.request.form
 

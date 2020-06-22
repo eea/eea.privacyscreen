@@ -25,6 +25,8 @@ class IframeFilter(object):
 
     def process(self, node):
 
+        # import pdb
+        # pdb.set_trace()
         src = node.get('src')
 
         # data-embed-group (group)
@@ -37,11 +39,11 @@ class IframeFilter(object):
 
         data = {}
         for k, v in ATTRIBUTES.items():
-            a = node.get(v)
+            a = node.get(k)
             if a:
                 data[v] = a
 
-        data['group'] = domain
+        data['group'] = domain or data.get('group')
         data['src'] = src
 
         qs = urlencode(data)

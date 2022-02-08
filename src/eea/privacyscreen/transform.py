@@ -1,3 +1,4 @@
+from __future__ import absolute_import
 from eea.privacyscreen.base import ATTRIBUTES
 from eea.privacyscreen.base import get_domain
 from plone.outputfilters.interfaces import IFilter
@@ -9,8 +10,8 @@ import lxml.html
 try:
     from urllib.parse import urlencode
 except ImportError:
-    import urllib
-    urlencode = urllib.urlencode
+    import six.moves.urllib.request, six.moves.urllib.parse, six.moves.urllib.error
+    urlencode = six.moves.urllib.parse.urlencode
 
 
 class IframeFilter(object):

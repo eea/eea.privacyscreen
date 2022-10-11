@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """Module where all interfaces, events and exceptions live."""
 
+from __future__ import absolute_import
 from collective.z3cform.datagridfield.registry import DictRow
 # from plone.app.textfield import RichText
 # from plone.app.z3cform.wysiwyg.widget import WysiwygFieldWidget

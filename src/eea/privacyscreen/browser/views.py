@@ -1,3 +1,4 @@
+from __future__ import absolute_import
 from eea.privacyscreen.base import EMBED_BACKGROUNDS
 from eea.privacyscreen.base import get_domain
 from eea.privacyscreen.base import PRIVACY_STATEMENTS

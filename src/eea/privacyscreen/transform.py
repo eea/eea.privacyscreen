@@ -10,7 +10,9 @@ import lxml.html
 try:
     from urllib.parse import urlencode
 except ImportError:
-    import six.moves.urllib.request, six.moves.urllib.parse, six.moves.urllib.error
+    import six.moves.urllib.request
+    import six.moves.urllib.parse
+    import six.moves.urllib.error
     urlencode = six.moves.urllib.parse.urlencode
 
 

@@ -9,7 +9,7 @@ CookiesHelper.createCookie = function(name, domain, days) {
   if (days) {
     var date = new Date();
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    expires = ';' + 'expires=' + date.toGMTString(); };
+    expires = ';' + 'expires=' + date.toGMTString(); }
 
   domain = false;
   if (domain) {

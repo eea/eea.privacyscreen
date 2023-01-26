@@ -5,10 +5,11 @@
 function CookiesHelper() {}
 
 CookiesHelper.createCookie = function(name, domain, days) {
+  var expires = "";
   if (days) {
     var date = new Date();
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    var expires = ";expires=" + date.toGMTString();
+    expires = ";expires=" + date.toGMTString();
   } else expires = "";
 
   domain = false;
@@ -21,11 +22,11 @@ CookiesHelper.createCookie = function(name, domain, days) {
 
   var cookie = name + "=true" + domain + expires + ";path=/";
   document.cookie = cookie;
-}
+};
 
 CookiesHelper.eraseCookie = function(name) {
   CookiesHelper.createCookie(name, "", -1);
-}
+};
 
 function onSubmit(event) {
   event.preventDefault();

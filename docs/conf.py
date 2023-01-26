@@ -36,7 +36,7 @@ templates_path = ['_templates']
 source_suffix = '.rst'
 
 # The encoding of source files.
-#source_encoding = 'utf-8-sig'
+# source_encoding = 'utf-8-sig'
 
 # The master toctree document.
 master_doc = 'index'
@@ -192,7 +192,7 @@ html_static_path = ['_static']
 # A dictionary with options for the search language support, empty by default.
 # 'ja' uses this config value.
 # 'zh' user can custom change `jieba` dictionary path.
-#html_search_options = {'type': 'default'}
+# html_search_options = {'type': 'default'}
 
 # The name of a javascript file (relative to the configuration directory) that
 # implements a search results scorer. If empty, the default will be used.
@@ -204,17 +204,17 @@ htmlhelp_basename = 'eea.privacyscreendoc'
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-# 'papersize': 'letterpaper',
+  # The paper size ('letterpaper' or 'a4paper').
+  # 'papersize': 'letterpaper',
 
-# The font size ('10pt', '11pt' or '12pt').
-# 'pointsize': '10pt',
+  # The font size ('10pt', '11pt' or '12pt').
+  # 'pointsize': '10pt',
 
-# Additional stuff for the LaTeX preamble.
-# 'preamble': '',
+  # Additional stuff for the LaTeX preamble.
+  # 'preamble': '',
 
-# Latex figure (float) alignment
-# 'figure_align': 'htbp',
+  # Latex figure (float) alignment
+  # 'figure_align': 'htbp',
 }
 
 

@@ -16,7 +16,7 @@ CookiesHelper.readCookie = function(name) {
     if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
   }
   return null;
-}
+};
 
 function setupPrivacyScreen() {
   var iframes = document.querySelectorAll('iframe');

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# pylint: disable=C0321
 
 from __future__ import absolute_import
 import os

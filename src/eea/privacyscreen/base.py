@@ -16,8 +16,9 @@ def detect_esri(src):
 PRIVACY_STATEMENTS = {
     "esri": {
         "detect": detect_esri,
-        "text": """ This content is hosted by a third party (ESRI); by showing the
-        external content you accept the terms and conditions of:
+        "text": """ This content is hosted by a third party (ESRI); 
+        by showing the external content you accept the terms and 
+        conditions of:
         <a
         target="_blank"
         href="https://www.esri.com/en-us/privacy/overview">www.esri.com/en-us/privacy/overview</a>

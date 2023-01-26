@@ -13,6 +13,8 @@ from z3c.form import form
 
 
 class EmbedScreenControlPanelForm(RegistryEditForm):
+    """ Embed """
+
     form.extends(RegistryEditForm)
     schema = IEmbedScreenSettings
 

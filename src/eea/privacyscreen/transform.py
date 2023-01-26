@@ -20,15 +20,19 @@ except ImportError:
 
 @implementer(IFilter)
 class IframeFilter(object):
+    """ Filter """
     order = 0
 
     def __init__(self, context, request):
         pass
 
     def is_enabled(self):
+        """ Enable """
+
         return True
 
     def process(self, node):
+        """ Process """
 
         # import pdb
         # pdb.set_trace()

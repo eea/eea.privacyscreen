@@ -11,8 +11,12 @@ DEFAULT_PRIVACY_STATEMENT = "Generic default privacy statement"
 
 
 def detect_esri(src):
+    """ Detect ESRI
+    """
+
     if 'arcgis.com' in src:
         return True
+    return False
 
 
 PRIVACY_STATEMENTS = {
@@ -45,3 +49,4 @@ def get_domain(src):
     for domain, info in PRIVACY_STATEMENTS.items():
         if info['detect'](src):
             return domain
+    return ""

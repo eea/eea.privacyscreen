@@ -28,7 +28,7 @@ class PrivacyScreenPortal(BrowserView):
         self.iframe_url = form.get('src')
         self.group = form.get('group', 'default')
 
-        # TODO: use embed_type to get fallback background
+        # To be fixed - use embed_type to get fallback background
         self.embed_background = form.get(
             'screenshot', EMBED_BACKGROUNDS.get(self.embed_type))
         self.settings = settings

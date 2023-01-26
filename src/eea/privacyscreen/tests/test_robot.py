@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# pylint: disable=C0321
+# pylint: disable=C0301
 from __future__ import absolute_import
 from eea.privacyscreen.testing import EEA_PRIVACYSCREEN_ACCEPTANCE_TESTING  # noqa: E501
 from plone.app.testing import ROBOT_TEST_LEVEL

@@ -16,8 +16,7 @@ CookiesHelper.createCookie = function(name, domain, days) {
     if (document.location.host.indexOf(domain) === -1) {
       domain = document.location.host;
     }
-    domain = ';domain=' + domain;
-  } else domain = '';
+    domain = ';domain=' + domain; }
 
   var cookie = name + '=true' + domain + expires + ';path=/';
   document.cookie = cookie;

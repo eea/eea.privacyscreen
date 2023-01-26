@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=C0301
+""" Update locales """
 
 from __future__ import absolute_import
 import os
-import pkg_resources
 import subprocess
+import pkg_resources
 
 
 domain = 'eea.privacyscreen'
@@ -19,6 +20,7 @@ excludes = '"*.html *json-schema*.xml"'
 
 
 def locale_folder_setup():
+    """ setup """"
     os.chdir(locale_path)
     languages = [d for d in os.listdir('.') if os.path.isdir(d)]
     for lang in languages:
@@ -43,12 +45,13 @@ def locale_folder_setup():
 
 
 def _rebuild():
+    """ Rebuild """
     cmd = '{i18ndude} rebuild-pot --pot {locale_path}/{domain}.pot --exclude {excludes} --create {domain} {target_path}'.format(  # NOQA: E501
         i18ndude=i18ndude,
         locale_path=locale_path,
         domain=domain,
         target_path=target_path,
-        exclude=excludes
+        excludes=excludes
     )
     subprocess.call(
         cmd,
@@ -57,6 +60,7 @@ def _rebuild():
 
 
 def _sync():
+    """ Sync """
     cmd = '{0} sync --pot {1}/{2}.pot {3}*/LC_MESSAGES/{4}.po'.format(
         i18ndude,
         locale_path,
@@ -71,6 +75,7 @@ def _sync():
 
 
 def update_locale():
+    """ Update """
     locale_folder_setup()
     _sync()
     _rebuild()

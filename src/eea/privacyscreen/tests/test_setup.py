@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # pylint: disable=C0301
-"""Setup tests for this package."""
+""" Setup tests for this package. """
 from __future__ import absolute_import
 from eea.privacyscreen.testing import EEA_PRIVACYSCREEN_INTEGRATION_TESTING  # noqa: E501
 from plone import api

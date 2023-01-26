@@ -9,23 +9,23 @@ CookiesHelper.createCookie = function(name, domain, days) {
   if (days) {
     var date = new Date();
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-    expires = ";expires=" + date.toGMTString();
-  } else expires = "";
+    expires = ';expires=' + date.toGMTString();
+  } else expires = '';
 
   domain = false;
   if (domain) {
     if (document.location.host.indexOf(domain) === -1) {
       domain = document.location.host;
     }
-    domain = ";domain=" + domain;
+    domain = ';domain=' + domain;
   } else domain = '';
 
-  var cookie = name + "=true" + domain + expires + ";path=/";
+  var cookie = name + '=true' + domain + expires + ';path=/';
   document.cookie = cookie;
 };
 
 CookiesHelper.eraseCookie = function(name) {
-  CookiesHelper.createCookie(name, "", -1);
+  CookiesHelper.createCookie(name, '', -1);
 };
 
 function onSubmit(event) {

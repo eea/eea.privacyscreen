@@ -4,8 +4,8 @@
 
 from __future__ import absolute_import
 import os
-import robotsuite
 import unittest
+import robotsuite
 from eea.privacyscreen.testing import EEA_PRIVACYSCREEN_ACCEPTANCE_TESTING  # noqa: E501
 from plone.app.testing import ROBOT_TEST_LEVEL
 from plone.testing import layered

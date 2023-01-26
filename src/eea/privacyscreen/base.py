@@ -1,3 +1,5 @@
+""" Base """
+
 ATTRIBUTES = {
     "data-embed-group": "group",
     "data-embed-screenshot": "screenshot",

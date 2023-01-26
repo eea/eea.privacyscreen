@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+""" Setuphandlers """
+
 from __future__ import absolute_import
 from Products.CMFPlone.interfaces import INonInstallable
 from zope.interface import implementer

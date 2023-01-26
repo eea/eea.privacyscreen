@@ -20,7 +20,7 @@ excludes = '"*.html *json-schema*.xml"'
 
 
 def locale_folder_setup():
-    """ setup """"
+    """ setup """
     os.chdir(locale_path)
     languages = [d for d in os.listdir('.') if os.path.isdir(d)]
     for lang in languages:

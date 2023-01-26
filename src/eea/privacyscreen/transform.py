@@ -1,3 +1,5 @@
+""" Transform """
+
 from __future__ import absolute_import
 from eea.privacyscreen.base import ATTRIBUTES
 from eea.privacyscreen.base import get_domain

@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+""" Testing """
+
 from __future__ import absolute_import
 from plone.app.robotframework.testing import REMOTE_LIBRARY_BUNDLE_FIXTURE
 from plone.app.testing import applyProfile

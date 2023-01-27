@@ -1,3 +1,5 @@
+""" Base """
+
 ATTRIBUTES = {
     "data-embed-group": "group",
     "data-embed-screenshot": "screenshot",
@@ -9,15 +11,20 @@ DEFAULT_PRIVACY_STATEMENT = "Generic default privacy statement"
 
 
 def detect_esri(src):
+    """ Detect ESRI
+    """
+
     if 'arcgis.com' in src:
         return True
+    return False
 
 
 PRIVACY_STATEMENTS = {
     "esri": {
         "detect": detect_esri,
-        "text": """ This content is hosted by a third party (ESRI); by showing the
-        external content you accept the terms and conditions of:
+        "text": """ This content is hosted by a third party (ESRI);
+        by showing the external content you accept the terms and
+        conditions of:
         <a
         target="_blank"
         href="https://www.esri.com/en-us/privacy/overview">www.esri.com/en-us/privacy/overview</a>
@@ -42,3 +49,4 @@ def get_domain(src):
     for domain, info in PRIVACY_STATEMENTS.items():
         if info['detect'](src):
             return domain
+    return ""

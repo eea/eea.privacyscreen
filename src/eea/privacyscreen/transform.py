@@ -1,3 +1,5 @@
+""" Transform """
+
 from __future__ import absolute_import
 from eea.privacyscreen.base import ATTRIBUTES
 from eea.privacyscreen.base import get_domain
@@ -10,21 +12,27 @@ import lxml.html
 try:
     from urllib.parse import urlencode
 except ImportError:
-    import six.moves.urllib.request, six.moves.urllib.parse, six.moves.urllib.error
+    import six.moves.urllib.request
+    import six.moves.urllib.parse
+    import six.moves.urllib.error
     urlencode = six.moves.urllib.parse.urlencode
 
 
 @implementer(IFilter)
 class IframeFilter(object):
+    """ Filter """
     order = 0
 
     def __init__(self, context, request):
         pass
 
     def is_enabled(self):
+        """ Enable """
+
         return True
 
     def process(self, node):
+        """ Process """
 
         # import pdb
         # pdb.set_trace()

@@ -20,13 +20,13 @@
         <input type="hidden" name="group" tal:attributes="value view/group" />
         <input type="hidden" name="cookie_domain" tal:attributes="value settings/cookie_domain" />
         <input type="hidden" name="lifetime_days" tal:attributes="value settings/lifetime_days" />
-        <button>Show external content</button>
+        <button i18n:translate="">Show external content</button>
         <div>
           <input
             name="remember"
             type="radio"
             />
-          <label for="remember">Remember my choice</label>
+          <label for="remember" i18n:translate="">Remember my choice</label>
         </div>
         <!-- <div> -->
           <!--   <input -->
@@ -36,7 +36,7 @@
               <!-- </div> -->
           </form>
 
-          <div id="choice_info">
+          <div id="choice_info" i18n:translate="">
             Your choice will be saved in a cookie for
             <strong tal:content="settings/cookie_domain" >Domain</strong>, managed by
             <strong tal:content="view/portal_url" >URL</strong> that will expire in

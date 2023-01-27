@@ -51,7 +51,6 @@ setup(
         'plone.api>=1.8.4',
         'plone.restapi',
         'plone.schema',
-
         "collective.z3cform.datagridfield",
     ],
     extras_require={

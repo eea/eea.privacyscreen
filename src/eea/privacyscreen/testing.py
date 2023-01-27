@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+""" Testing """
+
 from __future__ import absolute_import
 from plone.app.robotframework.testing import REMOTE_LIBRARY_BUNDLE_FIXTURE
 from plone.app.testing import applyProfile
@@ -12,13 +14,17 @@ import eea.privacyscreen
 
 
 class EeaPrivacyscreenLayer(PloneSandboxLayer):
+    """ Layer
+    """
 
     defaultBases = (PLONE_FIXTURE,)
 
     def setUpZope(self, app, configurationContext):
-        # Load any other ZCML that is required for your tests.
-        # The z3c.autoinclude feature is disabled in the Plone fixture base
-        # layer.
+        """ Load any other ZCML that is required for your tests.
+         The z3c.autoinclude feature is disabled in the Plone fixture base
+         layer.
+        """
+
         import plone.app.dexterity
         self.loadZCML(package=plone.app.dexterity)
         import plone.restapi
@@ -26,6 +32,9 @@ class EeaPrivacyscreenLayer(PloneSandboxLayer):
         self.loadZCML(package=eea.privacyscreen)
 
     def setUpPloneSite(self, portal):
+        """ setup Plone site
+        """
+
         applyProfile(portal, 'eea.privacyscreen:default')
 
 

@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
-"""Setup tests for this package."""
+# pylint: disable=C0301
+""" Setup tests for this package. """
 from __future__ import absolute_import
+import unittest
 from eea.privacyscreen.testing import EEA_PRIVACYSCREEN_INTEGRATION_TESTING  # noqa: E501
 from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
-
-import unittest
 
 
 try:
@@ -44,6 +44,7 @@ class TestSetup(unittest.TestCase):
 
 
 class TestUninstall(unittest.TestCase):
+    """ Test uninstall """
 
     layer = EEA_PRIVACYSCREEN_INTEGRATION_TESTING
 

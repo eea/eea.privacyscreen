@@ -1,3 +1,5 @@
+""" Controlpanel """
+
 from __future__ import absolute_import
 from eea.privacyscreen.interfaces import IEmbedScreenSettings
 from plone.app.registry.browser.controlpanel import ControlPanelFormWrapper
@@ -11,6 +13,8 @@ from z3c.form import form
 
 
 class EmbedScreenControlPanelForm(RegistryEditForm):
+    """ Embed """
+
     form.extends(RegistryEditForm)
     schema = IEmbedScreenSettings
 

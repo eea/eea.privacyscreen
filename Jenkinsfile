@@ -4,7 +4,7 @@ pipeline {
   environment {
         GIT_NAME = "eea.privacyscreen"
         GIT_HISTORYFILE = "CHANGES.rst"
-        SONARQUBE_TAGS = "water.eea.europa.eu"
+        SONARQUBE_TAGS = "water.europa.eu-marine"
     }
 
   stages {
